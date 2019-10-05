@@ -1,0 +1,23 @@
+version: '3'
+services:
+  frontend:
+    build: ./frontend
+    ports:
+    - "3000:3000"
+    volumes:
+    - ./frontend:/home/node/
+
+  backend:
+    build: ./backend
+    ports:
+    - "3001:3000"
+    volumes:
+    - ./backend:/home/node/
+
+  database:
+    image: mariadb
+    restart: always
+    ports:
+      - 3002:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: example
