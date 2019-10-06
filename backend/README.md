@@ -15,3 +15,4 @@ Documentation for MariaDB(SQL) and the MySQL Connector can be found here:
 
 # Todo
 - Figure out "close connection"
+- Find out, why there are SQL disconnecs after a few minutes
