@@ -6,7 +6,7 @@ const port = 3000
 // import routing
 var user = require('./src/user');
 
-sql.query('INSERT INTO `elearning`.`User` (`s-Nummer`) VALUES("s6032689");')
+sql.query('INSERT INTO `User` (`s-Nummer`) VALUES("s6032689");')
 
 sql.query('SELECT * FROM User;', function (error, results, fields) {
     if (error) throw error;

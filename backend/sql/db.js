@@ -8,21 +8,19 @@ var connection = mysql.createConnection({
     user: 'elearning',
     port: '3306',
     password: 'elearningpw',
-    database: 'elearning',
+    database: 'keiwan',
     multipleStatements: true
 });
 
 connection.connect();
 
 // Execute the database initialisation
-var file = fs.readFileSync('sql/init.sql').toString();
-connection.query(file, function (error, results, fields) {
+connection.query(fs.readFileSync('sql/init.sql').toString(), function (error, results, fields) {
     if (error) throw error;
+    connection.query(fs.readFileSync('sql/testdata.sql').toString(), function (error, results, fields) {
+        if (error) throw error;
+    });
 });
 
-var file = fs.readFileSync('sql/testdata.sql').toString();
-connection.query(file, function (error, results, fields) {
-    if (error) throw error;
-});
 
 module.exports = connection;
