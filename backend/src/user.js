@@ -1,18 +1,20 @@
 var express = require('express');
 var router = express.Router();
+var sql = require('../sql/db')
 
 // middleware that is specific to this router
-router.use(function timeLog(req, res, next) {
-    console.log('Time: ', Date.now());
+router.use(function (req, res, next) {
     next();
 });
-// define the home page route
-router.get('/', function (req, res) {
-    res.send('Birds home page');
-});
-// define the about route
-router.get('/about', function (req, res) {
-    res.send('About birds');
-});
 
+router.get('/login', function (req, res) {
+    sql.query("SELECT * FROM `User` WHERE `s-Nummer` = ? AND password = PASSWORD(?)", [req.query.username, req.query.password], function (error, results, fields) {
+        if (error) throw error;
+        if (results.length === 1) {
+            res.send('Login found!');
+        } else {
+            res.send('Login not found!');
+        }
+    })
+});
 module.exports = router;
