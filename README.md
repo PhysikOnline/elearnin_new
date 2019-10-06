@@ -18,7 +18,7 @@ var connection = mysql.createConnection({
     multipleStatements: true
 });
 ```
-
+__Caution:__ remember that we have to create a database for you, so if you want to develop on this project, send a mail to elearning@itp.uni-frankfurt.de
 # Start Project
 This project is docker based, that means, that you dont have to give a fuck about dependencies exept docker (see requirements) xD To start the project, simply go in to the project root folder and type:
 ```
