@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return (
-    <h1>Physik Elearning</h1>
+    <h1>Physik Elearnnnnning</h1>
   );
 }
 

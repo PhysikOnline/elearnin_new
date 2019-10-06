@@ -1,5 +1,6 @@
 version: '3'
 services:
+
   frontend:
     build: ./frontend
     ports:
@@ -25,3 +26,6 @@ services:
       - 3002:3306
     environment:
       MYSQL_ROOT_PASSWORD: example
+      MYSQL_USER: elearning
+      MYSQL_PASSWORD: elearningpw
+      MYSQL_DATABASE: elearning
