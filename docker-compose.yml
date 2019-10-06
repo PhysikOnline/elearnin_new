@@ -5,14 +5,18 @@ services:
     ports:
     - "3000:3000"
     volumes:
-    - ./frontend:/home/node/
+    - ./frontend:/home/node/dev
+    depends_on:
+    - backend
 
   backend:
     build: ./backend
     ports:
     - "3001:3000"
     volumes:
-    - ./backend:/home/node/
+    - ./backend:/home/node/dev
+    depends_on:
+    - database
 
   database:
     image: mariadb

@@ -1,0 +1,34 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'run', 'start' ]
+2 info using npm@6.9.0
+3 info using node@v10.16.3
+4 verbose config Skipping project config: /home/node/.npmrc. (matches userconfig)
+5 verbose run-script [ 'prestart', 'start', 'poststart' ]
+6 info lifecycle elearning-frontend@0.1.0~prestart: elearning-frontend@0.1.0
+7 info lifecycle elearning-frontend@0.1.0~start: elearning-frontend@0.1.0
+8 verbose lifecycle elearning-frontend@0.1.0~start: unsafe-perm in lifecycle true
+9 verbose lifecycle elearning-frontend@0.1.0~start: PATH: /usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/home/node/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+10 verbose lifecycle elearning-frontend@0.1.0~start: CWD: /home/node
+11 silly lifecycle elearning-frontend@0.1.0~start: Args: [ '-c', 'react-scripts start' ]
+12 info lifecycle elearning-frontend@0.1.0~start: Failed to exec start script
+13 verbose stack Error: elearning-frontend@0.1.0 start: `react-scripts start`
+13 verbose stack spawn ENOENT
+13 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/lib/spawn.js:48:18)
+13 verbose stack     at ChildProcess.emit (events.js:198:13)
+13 verbose stack     at maybeClose (internal/child_process.js:982:16)
+13 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:259:5)
+14 verbose pkgid elearning-frontend@0.1.0
+15 verbose cwd /home/node
+16 verbose Linux 4.19.69-1-MANJARO
+17 verbose argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "start"
+18 verbose node v10.16.3
+19 verbose npm  v6.9.0
+20 error file sh
+21 error code ELIFECYCLE
+22 error errno ENOENT
+23 error syscall spawn
+24 error elearning-frontend@0.1.0 start: `react-scripts start`
+24 error spawn ENOENT
+25 error Failed at the elearning-frontend@0.1.0 start script.
+25 error This is probably not a problem with npm. There is likely additional logging output above.
+26 verbose exit [ 1, true ]
