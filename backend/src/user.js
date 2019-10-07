@@ -1,20 +1,30 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-var sql = require('../sql/db')
+var sql = require("../db/db");
 
 // middleware that is specific to this router
-router.use(function (req, res, next) {
-    next();
+router.use(function(req, res, next) {
+  next();
 });
 
-router.get('/login', function (req, res) {
-    sql.query("SELECT * FROM `User` WHERE `s-Nummer` = ? AND password = PASSWORD(?)", [req.query.username, req.query.password], function (error, results, fields) {
+router.post("/login", function(req, res) {
+  if (req.session.username) {
+    res.status(200).send("ERROR: User already logged in");
+  } else {
+    sql.query(
+      "SELECT * FROM `User` WHERE `s-Nummer` = ? AND password = PASSWORD(?)",
+      [req.query.username, req.query.password],
+      function(error, results, fields) {
         if (error) throw error;
         if (results.length === 1) {
-            res.send('Login found!');
+          req.session.username = req.query.username;
+          res.status(200).send("Login sucsessfull");
         } else {
-            res.send('Login not found!');
+          res.status(200).send("ERROR: Incorrect credentials");
         }
-    })
+      }
+    );
+  }
 });
+
 module.exports = router;
