@@ -34,6 +34,18 @@ Documentation for MariaDB(SQL) and the MySQL Connector can be found here:
 | ERROR: Incorrect credentials  | the username or the passowrd provided, do not match the username or password stored in the database |
 | Login sucsessfull             | sucsesfully logged in, the username will be assiciated with the current session cockie              |
 
+### POST /user/logout
+
+| Attribute | Type | Required | Describtion |
+| --------- | ---- | -------- | ----------- |
+| -         | -    | -        | -           |
+
+| Response                 | Describtion                          |
+| ------------------------ | ------------------------------------ |
+| Sucsessfully logged out  | the session was sucsessfully removed |
+| ERROR: No User logged in | user not logged in, please log in    |
+
+
 # Todo
 
 - Figure out "close connection"
