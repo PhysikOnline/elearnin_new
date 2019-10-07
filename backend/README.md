@@ -1,9 +1,9 @@
 # Database Tutorial
 
-The connetion of the database is specified inside `/sql/db.js`. The database initialisation script is located inside `/sql/init.sql`. To use the Database in you .js files, you simplly do:
+The connetion of the database is specified inside `/db/db.js`. The database initialisation script is located inside `/db/init.sql`. To use the Database in you .js files, you simplly do:
 
 ```js
-var sql = require("./sql/db.js");
+var sql = require("./db/db.js");
 ```
 
 queries can the be executed with:
