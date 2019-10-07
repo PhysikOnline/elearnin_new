@@ -7,16 +7,15 @@
 - Postman
 
 # Before you start
-Make shure, that you inserted your firstname in "database" under `./backend/sql/db.js`. So when you firstname is Albert, it should look like this:
+Make shure, that you inserted your firstname in "database" under `./backend/sql/credentials.js`. So when you firstname is Albert, it should look like this:
 ```js
-var connection = mysql.createConnection({
+const options = {
     host: '141.2.246.162',
     user: 'elearning',
     port: '3306',
     password: 'elearningpw',
     database: 'albert',
-    multipleStatements: true
-});
+};
 ```
 __Caution:__ remember that we have to create a database for you, so if you want to develop on this project, send a mail to elearning@itp.uni-frankfurt.de
 # Start Project
