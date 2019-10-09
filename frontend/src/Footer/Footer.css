@@ -1,0 +1,14 @@
+.Footer {
+  flex-shrink: 0;
+  background-color: #005eaa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3px;
+}
+
+.Footer div {
+  text-align: center;
+  color: white;
+  margin: 3px;
+}
