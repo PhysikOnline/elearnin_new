@@ -29,4 +29,3 @@ The Services is reachable with:
 - Frontend: `http://localhost:3000` (use Chrome or Chromium, Firefox throws some errors, and I don't know where they are coming form xD)
 - Backend: `http://localhost:3001` (trust me, you want to use Postman!!!)
 - MariaDB: `141.2.246.162:3306` (accessable with MySQL-Workbench or whatever the fuck you wnat to use)
-
